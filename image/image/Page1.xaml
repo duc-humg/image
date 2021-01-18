@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="image.Page1"
+             BackgroundColor="#f067">
+    <ContentPage.Content>
+        <AbsoluteLayout >
+            <ActivityIndicator x:Name="active" IsRunning="True"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.5,0.05,30,30"/>
+            <Image x:Name="image" Aspect="AspectFit"
+                   AbsoluteLayout.LayoutFlags="All"
+                   AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"/>
+            <Image Source="arrow.png"
+                   Aspect="AspectFit"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.05,0.05,30,30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="next.png"
+                   Aspect="AspectFit"
+                   AbsoluteLayout.LayoutFlags="PositionProportional"
+                   AbsoluteLayout.LayoutBounds="0.95,0.05,30,30">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>
